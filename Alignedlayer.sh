@@ -144,7 +144,7 @@ function main_menu() {
     while true; do
         clear
         echo "===================AlignedLayer一键部署脚本==================="
-    	echo "BreadDog出品，电报：https://t.me/breaddog"
+    	echo "沟通电报群：https://t.me/lumaogogogo"
     	echo "最低配置：2C4G150G，推荐配置：4C8G300G"
         echo "请选择要执行的操作:"
         echo "1. 部署节点"
