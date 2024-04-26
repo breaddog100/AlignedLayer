@@ -30,7 +30,7 @@ function install_node() {
     alignedlayerd init $MONIKER --chain-id alignedlayer
     
     # 安装创世文件
-    wget -O $HOME/.alignedlayer/config/genesis.json https://snap.nodex.one/alignedlayer-testnet/genesis.json
+    wget -O $HOME/.alignedlayer/config/genesis.json https://services.staketab.org/aligned-testnet/genesis.json
     wget -O $HOME/.alignedlayer/config/addrbook.json https://services.staketab.org/aligned-testnet/addrbook.json
     
     # 设置配置文件
@@ -146,6 +146,9 @@ function main_menu() {
         echo "===================AlignedLayer一键部署脚本==================="
     	echo "沟通电报群：https://t.me/lumaogogogo"
     	echo "最低配置：2C4G150G，推荐配置：4C8G300G"
+    	echo "感谢以下无私的分享者："
+    	echo "weirongbo 提供的genesis.json"  
+    	echo "=================桃花潭水深千尺，不及汪伦送我情==================="
         echo "请选择要执行的操作:"
         echo "1. 部署节点"
         echo "2. 创建钱包"
