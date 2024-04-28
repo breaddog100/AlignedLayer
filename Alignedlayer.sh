@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# 脚本保存路径
-SCRIPT_PATH="$HOME/Alignedlayer.sh"
-
 # 节点安装功能
 function install_node() {
     
@@ -148,7 +145,7 @@ function main_menu() {
     	echo "最低配置：2C4G150G，推荐配置：4C8G300G"
     	echo "感谢以下无私的分享者："
     	echo "weirongbo 提供的genesis.json"  
-    	echo "=================桃花潭水深千尺，不及汪伦送我情==================="
+    	echo "===============桃花潭水深千尺，不及汪伦送我情================="
         echo "请选择要执行的操作:"
         echo "1. 部署节点"
         echo "2. 创建钱包"
