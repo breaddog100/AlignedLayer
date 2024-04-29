@@ -136,6 +136,15 @@ function delegate_stake() {
     --fees 50stake
 }
 
+# 代币转账
+function send_stake(){
+    read -p "收款钱包地址: " in_wallet_addr
+    read -p "发出钱包地址: " out_wallet_addr
+    read -p "请输入质押代币数量: " math
+    alignedlayerd tx bank send $in_wallet_addr $out_wallet_addr ${math}stake --chain-id alignedlayer --gas=auto --fees 20stake -y
+}
+
+
 # 主菜单
 function main_menu() {
     while true; do
@@ -157,6 +166,7 @@ function main_menu() {
         echo "8. 运行日志查询"
         echo "9. 删除节点"
         echo "10. 质押代币"  
+        echo "11. 代币转账"  
         echo "0. 退出脚本exit"
         read -r -p "请输入选项: " OPTION
     
@@ -171,6 +181,7 @@ function main_menu() {
         8) view_logs ;;
         9) uninstall_node ;;
         10) delegate_stake ;;  
+        11) send_stake ;;  
         0) echo "退出脚本。"; exit 0 ;;
         *) echo "无效选项，请重新输入。"; sleep 3 ;;
         esac
