@@ -129,7 +129,7 @@ function delegate_stake() {
     validator=$(alignedlayerd keys show $wallet_name --bech val -a)
     read -p "请输入质押给谁(默认为自己:$validator): " validator_addr
     if [ -z "$validator_addr" ]; then
-        $validator_addr=$validator
+        validator_addr=$validator
     fi
     alignedlayerd tx staking delegate $validator_addr ${math}stake \
     --from $wallet_name --chain-id alignedlayer \
@@ -153,7 +153,8 @@ function main_menu() {
     	echo "沟通电报群：https://t.me/lumaogogogo"
     	echo "最低配置：2C4G150G，推荐配置：4C8G300G"
     	echo "感谢以下无私的分享者："
-    	echo "weirongbo 提供的genesis.json"  
+    	echo "weirongbo 提供的genesis.json"
+    	echo "Hash_Pd 修复了验证者bugs"
     	echo "===============桃花潭水深千尺，不及汪伦送我情================="
         echo "请选择要执行的操作:"
         echo "1. 部署节点"
